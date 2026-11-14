@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Player</title>
+</head>
+
+<body>
+
+<div id="player"></div>
+
+<script>
+    async function carregarMusica() {
+
+        const numero = window.location.pathname.split("/").pop();
+
+        try {
+            const resposta = await fetch("/dados-musica/" + numero);
+            const musica = await resposta.json();
+
+            console.log("Música:", musica);
+
+            if (!resposta.ok) {
+                console.error(musica.erro);
+                return;
+            }
+
+            const iframe = document.createElement("iframe");
+
+            iframe.src =
+                "https://www.youtube.com/embed/" +
+                musica.youtubeId;
+
+            iframe.width = "640";
+            iframe.height = "360";
+            iframe.frameBorder = "0";
+            iframe.allowFullscreen = true;
+
+            document.getElementById("player").appendChild(iframe);
+
+        } catch (erro) {
+            console.error("Erro:", erro);
+        }
+    }
+
+    carregarMusica();
+</script>
+
+
+</body>
+</html>
