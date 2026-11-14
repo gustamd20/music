@@ -144,15 +144,15 @@ const musicas = [
   },
   {
     numero: 24,
-    cantor: "A Flock of Seagulls",
-    nome: "I Ran (So Far Away)",
-    youtubeId: "ui40yHyBe2I"
+    cantor: "Charlie Brown Jr.",
+    nome: "Tudo Que Ela Gosta De Escutar",
+    youtubeId: "XGSWIJ9Eed0"
   },
     {
     numero: 25,
-    cantor: "Rupert Holmes",
-    nome: "Escape",
-    youtubeId: "FXG_I_tf_i4"
+    cantor: "a-ha",
+    nome: "Take On Me",
+    youtubeId: "HzdD8kbDzZA"
   },
   {
     numero: 26,
@@ -425,8 +425,8 @@ const musicas = [
   {
     numero: 71,
     cantor: "Michael Jackson",
-    nome: "Dirty Diana",
-    youtubeId: "1R4pJc6vNn8"
+    nome: "You Rock My World",
+    youtubeId: "MiE1inuK5tE"
   },
   {
     numero: 72,
